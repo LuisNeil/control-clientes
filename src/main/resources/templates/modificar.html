@@ -4,7 +4,8 @@
         <meta charset="UTF-8"/>
     </head>
     <body>
-        <h1>Datos de la persona</h1>
+    <header th:replace="layout/layout :: header"></header>
+        <h2>Datos de la persona</h2>
         <a th:href="@{/inicio}">Regresar</a>
     <br/>
         <!--/*@thymesVar id="persona" type="co.com.gm.domain.Persona"*/-->
@@ -29,5 +30,6 @@
         <input type="submit" name="guardar" value="Guardar"/>
 
     </form>
+    <footer th:replace="layout/layout :: footer"></footer>
     </body>
 </html>
