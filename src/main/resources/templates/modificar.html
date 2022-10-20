@@ -13,12 +13,15 @@
         <br/>
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" id="nombre" th:field="*{nombre}">
+        <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}">Error nombre</span>
         <br/>
         <label for="apellido">Apellido:</label>
         <input type="text" name="apellido" id="apellido" th:field="*{apellido}">
+        <span th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}">Error apellido</span>
         <br/>
         <label for="email">E-mail:</label>
         <input type="email" name="email" id="email" th:field="*{email}">
+        <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Error email</span>
         <br/>
         <label for="telefono">Telefono:</label>
         <input type="tel" name="telefono" id="telefono" th:field="*{telefono}">

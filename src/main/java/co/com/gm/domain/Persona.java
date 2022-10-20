@@ -3,6 +3,8 @@ package co.com.gm.domain;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 import java.io.Serial;
 import java.io.Serializable;
 
@@ -16,9 +18,17 @@ public class Persona implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotEmpty
     private String nombre;
+
+    @NotEmpty
     private String apellido;
+
+    @NotEmpty
+    @Email
     private String email;
+
     private String telefono;
 
     public Persona(String nombre, String apellido, String email, String telefono) {
