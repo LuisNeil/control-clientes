@@ -9,6 +9,12 @@
         <h1 th:text="#{plantilla.titulo}">Titulo</h1>
     </header>
     <footer>
+        <div>
+            <br/>
+            <<!--<a th:href="@{/(lang=es)}">ES</a> |
+            <a th:href="@{/(lang=en)}">EN</a> |-->
+            <span th:text="#{plantilla.pie_pagina}"></span>
+        </div>
         <p th:text="#{plantilla.pie_pagina}">Derechos reservados></p>
     </footer>
     </body>
